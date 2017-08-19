@@ -1,22 +1,22 @@
 {
-  "main": "./lib/asar.js",
-  "name": "asar",
+  "main": "./lib/ashar.js",
+  "name": "ashar",
   "description": "Creating Electron app packages",
   "version": "0.13.0",
   "bin": {
-    "asar": "./bin/asar.js"
+    "ashar": "./bin/ashar.js"
   },
   "engines": {
     "node": ">=4.6"
   },
   "license": "MIT",
-  "homepage": "https://github.com/electron/asar",
+  "homepage": "https://github.com/electron/ashar",
   "repository": {
     "type": "git",
-    "url": "https://github.com/electron/asar.git"
+    "url": "https://github.com/electron/ashar.git"
   },
   "bugs": {
-    "url": "https://github.com/electron/asar/issues"
+    "url": "https://github.com/electron/ashar/issues"
   },
   "scripts": {
     "test": "mocha --reporter spec && npm run lint",

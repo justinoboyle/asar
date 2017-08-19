@@ -1,9 +1,9 @@
-# asar - Electron Archive
+# ashar - Electron Archive
 
-[![Travis build status](https://travis-ci.org/electron/asar.svg?branch=master)](https://travis-ci.org/electron/asar)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/mrfwfr0uxlbwkuq3?svg=true)](https://ci.appveyor.com/project/electron-bot/asar)
-[![dependencies](http://img.shields.io/david/electron/asar.svg?style=flat-square)](https://david-dm.org/electron/asar)
-[![npm version](http://img.shields.io/npm/v/asar.svg?style=flat-square)](https://npmjs.org/package/asar)
+[![Travis build status](https://travis-ci.org/electron/ashar.svg?branch=master)](https://travis-ci.org/electron/ashar)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/mrfwfr0uxlbwkuq3?svg=true)](https://ci.appveyor.com/project/electron-bot/ashar)
+[![dependencies](http://img.shields.io/david/electron/ashar.svg?style=flat-square)](https://david-dm.org/electron/ashar)
+[![npm version](http://img.shields.io/npm/v/ashar.svg?style=flat-square)](https://npmjs.org/package/ashar)
 
 Asar is a simple extensive archive format, it works like `tar` that concatenates
 all files together without compression, while having random access support.
@@ -19,23 +19,23 @@ all files together without compression, while having random access support.
 ### Install
 
 ```bash
-$ npm install asar
+$ npm install ashar
 ```
 
 ### Usage
 
 ```bash
-$ asar --help
+$ ashar --help
 
-  Usage: asar [options] [command]
+  Usage: ashar [options] [command]
 
   Commands:
 
     pack|p <dir> <output>
-       create asar archive
+       create ashar archive
 
     list|l <archive>
-       list files of asar archive
+       list files of ashar archive
 
     extract-file|ef <archive> <filename>
        extract one file from archive
@@ -68,17 +68,17 @@ Given:
 
 Exclude: a, b
 ```bash
-$ asar pack app app.asar --unpack-dir "{x1,x2}"
+$ ashar pack app app.ashar --unpack-dir "{x1,x2}"
 ```
 
 Exclude: a, b, d, f
 ```bash
-$ asar pack app app.asar --unpack-dir "**/{x1,x2}"
+$ ashar pack app app.ashar --unpack-dir "**/{x1,x2}"
 ```
 
 Exclude: a, b, d, f, h
 ```bash
-$ asar pack app app.asar --unpack-dir "{**/x1,**/x2,z4/w1}"
+$ ashar pack app app.ashar --unpack-dir "{**/x1,**/x2,z4/w1}"
 ```
 
 ## Using programatically
@@ -86,12 +86,12 @@ $ asar pack app app.asar --unpack-dir "{**/x1,**/x2,z4/w1}"
 ### Example
 
 ```js
-var asar = require('asar');
+var ashar = require('ashar');
 
 var src = 'some/path/';
-var dest = 'name.asar';
+var dest = 'name.ashar';
 
-asar.createPackage(src, dest, function() {
+ashar.createPackage(src, dest, function() {
   console.log('done.');
 })
 ```
@@ -101,33 +101,33 @@ Please note that there is currently **no** error handling provided!
 ### Transform
 You can pass in a `transform` option, that is a function, which either returns
 nothing, or a `stream.Transform`. The latter will be used on files that will be
-in the `.asar` file to transform them (e.g. compress).
+in the `.ashar` file to transform them (e.g. compress).
 
 ```js
-var asar = require('asar');
+var ashar = require('ashar');
 
 var src = 'some/path/';
-var dest = 'name.asar';
+var dest = 'name.ashar';
 
 function transform(filename) {
   return new CustomTransformStream()
 }
 
-asar.createPackageWithOptions(src, dest, { transform: transform }, function() {
+ashar.createPackageWithOptions(src, dest, { transform: transform }, function() {
   console.log('done.');
 })
 ```
 
 ## Using with grunt
 
-There is also an unofficial grunt plugin to generate asar archives at [bwin/grunt-asar][grunt-asar].
+There is also an unofficial grunt plugin to generate ashar archives at [bwin/grunt-ashar][grunt-ashar].
 
 ## Format
 
 Asar uses [Pickle][pickle] to safely serialize binary value to file, there is
 also a [node.js binding][node-pickle] of `Pickle` class.
 
-The format of asar is very flat:
+The format of ashar is very flat:
 
 ```
 | UInt32: header_size | String: header | Bytes: file1 | ... | Bytes: file42 |
@@ -190,4 +190,4 @@ convert `Number` to UINT64.
 
 [pickle]: https://chromium.googlesource.com/chromium/src/+/master/base/pickle.h
 [node-pickle]: https://www.npmjs.org/package/chromium-pickle
-[grunt-asar]: https://github.com/bwin/grunt-asar
+[grunt-ashar]: https://github.com/bwin/grunt-ashar

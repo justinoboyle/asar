@@ -5,7 +5,7 @@
 [![dependencies](http://img.shields.io/david/electron/ashar.svg?style=flat-square)](https://david-dm.org/electron/ashar)
 [![npm version](http://img.shields.io/npm/v/ashar.svg?style=flat-square)](https://npmjs.org/package/ashar)
 
-Asar is a simple extensive archive format, it works like `tar` that concatenates
+Ashar is a simple extensive archive format, it works like `tar` that concatenates
 all files together without compression, while having random access support.
 
 ## Features

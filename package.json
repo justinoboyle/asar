@@ -2,7 +2,7 @@
   "main": "./lib/ashar.js",
   "name": "ashar",
   "description": "Creating Electron app packages",
-  "version": "0.13.0",
+  "version": "0.14.1",
   "bin": {
     "ashar": "./bin/ashar.js"
   },

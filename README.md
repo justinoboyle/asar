@@ -1,4 +1,6 @@
-# ashar - Electron Archive
+![Asharchive](/aclogo.png?raw=true)
+
+# ashar (asharchive) - Electron Archive
 
 [![Travis build status](https://travis-ci.org/electron/ashar.svg?branch=master)](https://travis-ci.org/electron/ashar)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/mrfwfr0uxlbwkuq3?svg=true)](https://ci.appveyor.com/project/electron-bot/ashar)

@@ -1,4 +1,4 @@
-![Asharchive](/asharchive.png)
+![Asharchive](/aclogo.png?raw=true)
 
 # ashar (asharchive) - Electron Archive
 

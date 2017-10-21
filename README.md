@@ -1,3 +1,5 @@
+![Asharchive](/asharchive.png)
+
 # ashar (asharchive) - Electron Archive
 
 [![Travis build status](https://travis-ci.org/electron/ashar.svg?branch=master)](https://travis-ci.org/electron/ashar)
